@@ -1,23 +1,12 @@
+import getColumns from './getColumns';
+
 type Main = (input: string) => number;
 
 const main: Main = (input) => {
   const rows = input.split('\n');
   console.log('🚀 ~ rows:', rows);
 
-  const columns = rows.reduce<{ first: Array<number>; second: Array<number> }>(
-    (acc, row) => {
-      const columns = row.split('   ');
-
-      acc.first.push(Number(columns[0]));
-      acc.second.push(Number(columns[1]));
-
-      return acc;
-    },
-    { first: [], second: [] }
-  );
-
-  columns.first.sort();
-  columns.second.sort();
+  const columns = getColumns(rows);
 
   console.log('🚀 ~ columns:', columns);
 
