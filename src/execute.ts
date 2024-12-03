@@ -20,9 +20,7 @@ async function execute() {
     const inputFileName = `./data/day-${dayToSolve}/input.txt`;
     const input = await fs.readFile(inputFileName);
 
-    const { main } = await import(
-      `./day-${dayToSolve}/${stepToSolve}.js`
-    );
+    const { main } = await import(`./day-${dayToSolve}/${stepToSolve}.js`);
 
     const output = main(input.toString());
 
