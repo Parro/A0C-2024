@@ -24,10 +24,11 @@ const main: (input: string) => number = (input) => {
         if (
           findString({
             stringToSearch: 'XMAS',
+            charToSearch: 'A',
             matrix,
             start: [rowIndex, charIndex],
             direction,
-          })
+          }) !== null
         ) {
           // console.log('🚀 ~ increase ');
           accColumn++;
