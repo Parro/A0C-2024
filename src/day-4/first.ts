@@ -1,4 +1,4 @@
-import findString from './lib/findString';
+import findString from '../lib/findString';
 
 const directions = [
   'North',
